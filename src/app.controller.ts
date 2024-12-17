@@ -37,7 +37,7 @@ export class TodosController {
       return this.todos
     }
   }
-  
+
   @Patch('completed-all')
   completeAllTodos(@Res() res: Response) {
     this.todos = this.todos.map(todo => ({...todo, completed: true}))
